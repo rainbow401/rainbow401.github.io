@@ -7,13 +7,12 @@ descriptionHTML: '
     <span class="line"><span style="color:#FFCB6B;">npm</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">create</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">@sugarat/theme@latest</span></span>
     <br/>
     <br/>
-    <span class="line"><span style="color:#B392F0;">bun create</span><span style="color:#E1E4E8;"> </span><span style="color:#9ECBFF;">@sugarat/theme</span><span style="color:#E1E4E8;"> </span></span>
+    <span class="line"><span style="color:#B392F0;">bun create</span><span style="color:#E1E4E8;"> </span><span style="color:#9ECBFF;">@sugarat/theme</span></span>
 </code>
 </pre>'
 tag:
  - SOP
 top: 1
-sidebar: false
 ---
 
 # 快速上手
@@ -175,7 +174,7 @@ bun install vitepress@latest
 :::
 
 ## 更多
-* [主题配置：首页&文章](https://theme.sugarat.top/config/frontmatter.html) - 主题提供的一些 `frontmatter`
-* [主题配置：全局](https://theme.sugarat.top/config/global.html) - 主题提供的额外能力
-* [主题配置：样式](https://theme.sugarat.top/config/style.html) - 自定义博客样式介绍
-* [主题配置：组件能力](https://theme.sugarat.top/config/component.html) - 自定义博客样式介绍
+* [主题配置：首页&文章](./../config/frontmatter.md) - 主题提供的一些 `frontmatter`
+* [主题配置：全局](./../config/global.md) - 主题提供的额外能力
+* [主题配置：样式](./../config/style.md) - 自定义博客样式介绍
+* [使用 GitHub/Gitee Pages 部署博客](./gh-pages.md)

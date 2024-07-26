@@ -1,7 +1,12 @@
 ---
+title: 'VitePress 博客主题'
 layout: home
 # 首页部分元素定制
 blog:
+#  author: Sugar
+#  logo: /logo.png
+#  avatarMode: split
+#  minScreenAvatar: false
  name: '@sugarat/theme'
  motto: 简约风的 Vitepress 博客主题
  inspiring:
@@ -12,5 +17,25 @@ blog:
   - 生活的真谛不在繁华，而在于淡泊
  # 设置 inspiringTimeout 可以实现自动切换
  inspiringTimeout: 3000
- pageSize: 6
+ pageSize: 10
+pagefind-indexed: false
 ---
+
+# ⚡ 快速开始
+
+:::code-group
+```sh [npm]
+npm create @sugarat/theme@latest
+```
+```sh [yarn]
+yarn create @sugarat/theme
+```
+```sh [pnpm]
+pnpm create @sugarat/theme
+```
+```sh [bun]
+bun create @sugarat/theme
+```
+:::
+
+期待你提交[案例](./example/index.md) 😄

@@ -1,72 +1,95 @@
-// 主题独有配置
+import process from 'node:process'
+import type { Theme } from '@sugarat/theme'
 import { getThemeConfig } from '@sugarat/theme/node'
+import workConfig from './works'
 
-// 开启RSS支持（RSS配置）
-// import type { Theme } from '@sugarat/theme'
+const baseUrl = 'https://theme.sugarat.top'
+const RSS: Theme.RSSOptions = {
+  title: '@sugarat/theme',
+  baseUrl,
+  copyright: 'Copyright (c) 2023-present, 粥里有勺糖',
+  description: '基于 vitepress 实现的简约博客主题'
+}
 
-// const baseUrl = 'https://sugarat.top'
-// const RSS: Theme.RSSOptions = {
-//   title: '粥里有勺糖',
-//   baseUrl,
-//   copyright: 'Copyright (c) 2018-present, 粥里有勺糖',
-//   description: '你的指尖,拥有改变世界的力量（大前端相关技术分享）',
-//   language: 'zh-cn',
-//   image: 'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-//   favicon: 'https://sugarat.top/favicon.ico',
-// }
-
-// 所有配置项，详见文档: https://theme.sugarat.top/
-const blogTheme = getThemeConfig({
-  // 开启RSS支持
-  // RSS,
-
-  // 搜索
-  // 默认开启pagefind离线的全文搜索支持（如使用其它的可以设置为false）
-  // search: false,
-
-  // markdown 图表支持（会增加一定的构建耗时）
-  // mermaid: true
-
-  // 页脚
-  footer: {
-    // message 字段支持配置为HTML内容，配置多条可以配置为数组
-    // message: '下面 的内容和图标都是可以修改的噢（当然本条内容也是可以隐藏的）',
-    copyright: 'MIT License | 粥里有勺糖',
-    // icpRecord: {
-    //   name: '蜀ICP备19011724号',
-    //   link: 'https://beian.miit.gov.cn/'
-    // },
-    // securityRecord: {
-    //   name: '公网安备xxxxx',
-    //   link: 'https://www.beian.gov.cn/portal/index.do'
-    // },
+export const blogTheme = getThemeConfig({
+  search: {
+    pageResultCount: 5
   },
-
-  // 主题色修改
-  themeColor: 'el-blue',
-
-  // 文章默认作者
-  author: '粥里有勺糖',
-
-  // 友链
+  // 图表支持
+  mermaid: true,
+  imageStyle: {
+    coverPreview: [
+      // 七牛云
+      {
+        rule: '//img.cdn.sugarat.top',
+        suffix: '~cover.webp'
+      },
+      // 又拍云CDN
+      {
+        rule: '//cdn.upyun.sugarat.top',
+        suffix: '-cover'
+      }
+    ]
+  },
+  oml2d: {
+    mobileDisplay: true,
+    models: [
+      {
+        path: 'https://oml2d-models.sugarat.top/Senko_Normals/senko.model3.json',
+      },
+      {
+        path: 'https://oml2d-models.sugarat.top/mai/model.json',
+      }
+    ],
+  },
+  RSS,
+  authorList: [
+    {
+      nickname: '粥里有勺糖',
+      url: 'https://sugarat.top/aboutme.html',
+      des: '你的指尖,拥有改变世界的力量'
+    }
+  ],
+  recommend: {
+    nextText: '下一页',
+    sort(a, b) {
+      return +new Date(b.meta.date) - +new Date(a.meta.date)
+    },
+  },
   friend: [
     {
       nickname: '粥里有勺糖',
-      des: '你的指尖用于改变世界的力量',
+      des: '你的指尖,拥有改变世界的力量',
       avatar:
         'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-      url: 'https://sugarat.top',
+      url: 'https://sugarat.top'
     },
     {
       nickname: 'Vitepress',
       des: 'Vite & Vue Powered Static Site Generator',
-      avatar:
-        'https://vitepress.dev/vitepress-logo-large.webp',
-      url: 'https://vitepress.dev/',
-    },
+      avatar: 'https://vitepress.dev/vitepress-logo-large.webp',
+      url: 'https://vitepress.dev/'
+    }
   ],
-
-  // 公告
+  // 文章默认作者
+  author: '粥里有勺糖',
+  // 评论
+  comment: {
+    type: 'giscus',
+    options: {
+      repo: 'ATQQ/sugar-blog',
+      repoId: 'MDEwOlJlcG9zaXRvcnkyNDEyNDUyOTk',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDODmEcc84COVc6',
+      inputPosition: 'top',
+    },
+  },
+  buttonAfterArticle: {
+    openTitle: '投"币"支持',
+    closeTitle: '下次一定',
+    content: '<img src="https://img.cdn.sugarat.top/mdImg/MTY0Nzc1NTYyOTE5Mw==647755629193">',
+    icon: 'wechatPay',
+  },
   popover: {
     title: '公告',
     body: [
@@ -95,11 +118,32 @@ const blogTheme = getThemeConfig({
         props: {
           type: 'success'
         },
-        link: 'https://theme.sugarat.top/group.html',
+        link: '/group.html',
       }
     ],
     duration: 0
   },
+  works: workConfig,
+  footer: {
+    copyright: 'MIT License | 粥里有勺糖',
+  }
 })
 
-export { blogTheme }
+export const extraHead: any
+  = process.env.NODE_ENV === 'production'
+    ? [
+        [
+          'script',
+          {
+            charset: 'UTF-8',
+            id: 'LA_COLLECT',
+            src: '//sdk.51.la/js-sdk-pro.min.js'
+          }
+        ],
+        [
+          'script',
+          {},
+          'LA.init({id:"Jyzk2AcXA3JsYbrG",ck:"Jyzk2AcXA3JsYbrG",hashMode:true})'
+        ]
+      ]
+    : []
