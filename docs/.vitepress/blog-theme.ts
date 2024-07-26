@@ -1,6 +1,6 @@
 import process from 'node:process'
-import type { Theme } from '@sugarat/theme'
-import { getThemeConfig } from '@sugarat/theme/node'
+import type { Theme } from '../../src'
+import { getThemeConfig } from '../../src/node'
 import workConfig from './works'
 
 const baseUrl = 'https://theme.sugarat.top'
