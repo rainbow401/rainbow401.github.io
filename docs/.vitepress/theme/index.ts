@@ -1,4 +1,4 @@
-import BlogTheme from '../theme'
+import BlogTheme from '../../../src/index'
 import './theme.var.css'
 import { h } from 'vue'
 import ChangeThemeDemo from './ChangeThemeDemo.vue'

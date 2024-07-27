@@ -26,11 +26,11 @@ import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 // 图表渲染组件
 // replace-mermaid-import-code
 // import Mermaid from 'vitepress-plugin-mermaid/Mermaid.vue'
-import BlogApp from './components/BlogApp.vue'
+import BlogApp from '../src/components/BlogApp.vue'
 import { withConfigProvider } from './composables/config/blog'
 
 // page
-import UserWorksPage from './components/UserWorks.vue'
+import UserWorksPage from '../src/components/UserWorks.vue'
 
 // 内置一些特殊的主题色
 import './styles/theme/inline-theme.var.css'
