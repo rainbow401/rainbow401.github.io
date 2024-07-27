@@ -7,20 +7,20 @@ export default defineConfig({
   extends: blogTheme,
   metaChunk: true,
   sitemap: {
-    hostname: 'https://theme.sugarat.top',
+    hostname: 'https://rainbow401.github.io/',
   },
   cleanUrls: false,
   lang: 'zh-cn',
-  title: '@sugarat/theme',
+  title: 'Hello',
   description: '粥里有勺糖的博客主题，基于 vitepress 实现',
   // head: [...extraHead],
-  vite: {
-    resolve: {
-      alias: {
-        '@sugarat/theme': path.join(__dirname, '../../src/index.ts')
-      }
-    },
-  },
+  // vite: {
+  //   resolve: {
+  //     alias: {
+  //       '@sugarat/theme': path.join(__dirname, '../../src/index.ts')
+  //     }
+  //   },
+  // },
   themeConfig: {
     logo: '/logo.png',
     nav: [
