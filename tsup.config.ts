@@ -7,5 +7,5 @@ export default defineConfig({
   dts: true,
   external: ['vitepress'],
   noExternal: ['vitepress-plugin-tabs'],
-  silent: true
+  silent: true,
 })

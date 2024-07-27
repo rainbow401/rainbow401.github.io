@@ -1,13 +1,13 @@
-import process from 'node:process'
+// import process from 'node:process'
 import type { Theme } from '../../src'
 import { getThemeConfig } from '../../src/node'
 import workConfig from './works'
 
 const baseUrl = 'https://rainbow401.github.io/yanzhihao1019.github.io/'
 const RSS: Theme.RSSOptions = {
-  title: '@sugarat/theme',
+  title: 'hello',
   baseUrl,
-  copyright: 'Copyright (c) 2023-present, 粥里有勺糖',
+  copyright: 'Copyright (c) 2024-present',
   description: '基于 vitepress 实现的简约博客主题'
 }
 
@@ -129,21 +129,21 @@ export const blogTheme = getThemeConfig({
   }
 })
 
-export const extraHead: any
-  = process.env.NODE_ENV === 'production'
-    ? [
-        [
-          'script',
-          {
-            charset: 'UTF-8',
-            id: 'LA_COLLECT',
-            src: '//sdk.51.la/js-sdk-pro.min.js'
-          }
-        ],
-        [
-          'script',
-          {},
-          'LA.init({id:"Jyzk2AcXA3JsYbrG",ck:"Jyzk2AcXA3JsYbrG",hashMode:true})'
-        ]
-      ]
-    : []
+// export const extraHead: any
+//   = process.env.NODE_ENV === 'production'
+//     ? [
+//         [
+//           'script',
+//           {
+//             charset: 'UTF-8',
+//             id: 'LA_COLLECT',
+//             src: '//sdk.51.la/js-sdk-pro.min.js'
+//           }
+//         ],
+//         [
+//           'script',
+//           {},
+//           'LA.init({id:"Jyzk2AcXA3JsYbrG",ck:"Jyzk2AcXA3JsYbrG",hashMode:true})'
+//         ]
+//       ]
+//     : []

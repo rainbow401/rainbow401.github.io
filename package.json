@@ -9,6 +9,14 @@
     "build": "vitepress build docs",
     "serve": "vitepress serve docs"
   },
+  "exports": {
+    "./node": {
+      "types": "./node.d.ts",
+      "default": "./node.js"
+    },
+    "./package.json": "./package.json",
+    ".": "./src/index.ts"
+  },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
 
