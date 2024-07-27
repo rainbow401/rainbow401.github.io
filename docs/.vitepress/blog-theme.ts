@@ -3,7 +3,7 @@ import type { Theme } from '../../src'
 import { getThemeConfig } from '../../src/node'
 import workConfig from './works'
 
-const baseUrl = 'https://rainbow401.github.io/'
+export const baseUrl = 'https://rainbow401.github.io/'
 const RSS: Theme.RSSOptions = {
   title: 'hello',
   baseUrl,

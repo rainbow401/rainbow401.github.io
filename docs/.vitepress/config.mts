@@ -8,7 +8,7 @@ export default defineConfig({
   extends: blogTheme,
   metaChunk: true,
   sitemap: {
-    hostname: 'https://rainbow401.github.io/',
+    hostname: blogTheme.baseUrl,
   },
   cleanUrls: false,
   lang: 'zh-cn',
@@ -18,7 +18,7 @@ export default defineConfig({
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
     // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
-    ['link', { rel: 'icon', href: `/favicon.ico` }]
+    ['link', { rel: 'icon', href: `${blogTheme.baseUrl}/favicon.ico` }]
   ],
   // vite: {
   //   resolve: {
