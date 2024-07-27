@@ -40,7 +40,8 @@ const openTransition = useDarkTransitionConfig()
       <ClientOnly>
         <BlogOml2d />
         <BlogAlert />
-        <BlogPopover />
+        <!-- 公告组件 -->
+        <!-- <BlogPopover /> -->
       </ClientOnly>
     </template>
 
