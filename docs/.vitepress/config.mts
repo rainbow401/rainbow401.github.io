@@ -15,6 +15,11 @@ export default defineConfig({
   title: 'Hello',
   description: '粥里有勺糖的博客主题，基于 vitepress 实现',
   // head: [...extraHead],
+  head: [
+    // 配置网站的图标（显示在浏览器的 tab 上）
+    // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
+    ['link', { rel: 'icon', href: `/favicon.ico` }]
+  ],
   vite: {
     resolve: {
       alias: {
