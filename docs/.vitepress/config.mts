@@ -20,13 +20,13 @@ export default defineConfig({
     // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
     ['link', { rel: 'icon', href: `/favicon.ico` }]
   ],
-  vite: {
-    resolve: {
-      alias: {
-        '@sugarat/theme': path.join(__dirname, '../../src/index.ts')
-      }
-    },
-  },
+  // vite: {
+  //   resolve: {
+  //     alias: {
+  //       '@sugarat/theme': path.join(__dirname, '../../src/index.ts')
+  //     }
+  //   },
+  // },
   themeConfig: {
     logo: '/logo.png',
     nav: [
