@@ -1,4 +1,4 @@
-import type { Theme } from '@sugarat/theme'
+import type { Theme } from '../../src'
 
 const workConfig: Theme.UserWorks = {
   title: '个人项目/线上作品',
