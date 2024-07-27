@@ -77,10 +77,10 @@ export const blogTheme = getThemeConfig({
   comment: {
     type: 'giscus',
     options: {
-      repo: 'ATQQ/sugar-blog',
-      repoId: 'MDEwOlJlcG9zaXRvcnkyNDEyNDUyOTk',
+      repo: 'rainbow401/comment',
+      repoId: 'R_kgDOMb2UrQ',
       category: 'Announcements',
-      categoryId: 'DIC_kwDODmEcc84COVc6',
+      categoryId: 'DIC_kwDOMb2Urc4ChOFd',
       inputPosition: 'top',
     },
   },
