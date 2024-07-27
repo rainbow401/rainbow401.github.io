@@ -1,4 +1,4 @@
-import BlogTheme from '@sugarat/theme'
+import BlogTheme from '../theme'
 import './theme.var.css'
 import { h } from 'vue'
 import ChangeThemeDemo from './ChangeThemeDemo.vue'
