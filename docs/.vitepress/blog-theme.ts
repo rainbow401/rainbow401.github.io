@@ -5,7 +5,7 @@ import workConfig from './works'
 
 export const baseUrl = 'https://rainbow401.github.io/'
 const RSS: Theme.RSSOptions = {
-  title: 'hello',
+  title: 'rainbow',
   baseUrl,
   copyright: 'Copyright (c) 2024-present',
   description: '基于 vitepress 实现的简约博客主题'
@@ -19,16 +19,16 @@ export const blogTheme = getThemeConfig({
   mermaid: true,
   imageStyle: {
     coverPreview: [
-      // 七牛云
-      {
-        rule: '//img.cdn.sugarat.top',
-        suffix: '~cover.webp'
-      },
-      // 又拍云CDN
-      {
-        rule: '//cdn.upyun.sugarat.top',
-        suffix: '-cover'
-      }
+      // // 七牛云
+      // {
+      //   rule: '//img.cdn.sugarat.top',
+      //   suffix: '~cover.webp'
+      // },
+      // // 又拍云CDN
+      // {
+      //   rule: '//cdn.upyun.sugarat.top',
+      //   suffix: '-cover'
+      // }
     ]
   },
   oml2d: {
@@ -72,7 +72,7 @@ export const blogTheme = getThemeConfig({
     }
   ],
   // 文章默认作者
-  author: '粥里有勺糖',
+  author: 'rainbow',
   // 评论
   comment: {
     type: 'giscus',
@@ -85,10 +85,10 @@ export const blogTheme = getThemeConfig({
     },
   },
   buttonAfterArticle: {
-    openTitle: '投"币"支持',
-    closeTitle: '下次一定',
-    content: '<img src="https://img.cdn.sugarat.top/mdImg/MTY0Nzc1NTYyOTE5Mw==647755629193">',
-    icon: 'wechatPay',
+    // openTitle: '投"币"支持',
+    // closeTitle: '下次一定',
+    // content: '<img src="https://img.cdn.sugarat.top/mdImg/MTY0Nzc1NTYyOTE5Mw==647755629193">',
+    // icon: 'wechatPay',
   },
   popover: {
     title: '公告',
@@ -125,7 +125,7 @@ export const blogTheme = getThemeConfig({
   },
   works: workConfig,
   footer: {
-    copyright: 'MIT License | 粥里有勺糖',
+    copyright: 'MIT License | rainbow',
   }
 })
 

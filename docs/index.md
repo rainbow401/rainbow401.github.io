@@ -7,7 +7,7 @@ blog:
 #  logo: /logo.png
 #  avatarMode: split
 #  minScreenAvatar: false
- name: '@sugarat/theme'
+ name: 'rainbow'
  motto: 简约风的 Vitepress 博客主题
  inspiring:
   - 基于 Vitepress 定制的主题🎨

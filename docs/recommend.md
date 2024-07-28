@@ -120,9 +120,9 @@ import { RSSOptions, RssPlugin } from 'vitepress-plugin-rss'
 
 const baseUrl = 'https://sugarat.top'
 const RSS: RSSOptions = {
-  title: '粥里有勺糖',
+  title: 'rainbow',
   baseUrl,
-  copyright: 'Copyright (c) 2018-present, 粥里有勺糖',
+  copyright: 'Copyright (c) 2018-present, rainbow',
 }
 
 export default defineConfig({

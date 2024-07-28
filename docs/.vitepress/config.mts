@@ -12,8 +12,8 @@ export default defineConfig({
   },
   cleanUrls: false,
   lang: 'zh-cn',
-  title: 'Hello',
-  description: '粥里有勺糖的博客主题，基于 vitepress 实现',
+  title: 'rainbow',
+  description: 'rainbow的博客主题，基于 vitepress 实现',
   // head: [...extraHead],
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
@@ -30,59 +30,59 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.png',
     nav: [
-      {
-        text: `v${packageJSON.version}`,
-        link: '/changelog'
-      },
-      {
-        text: '个人作品展示',
-        link: '/work'
-      },
-      {
-        text: '案例',
-        link: '/example/'
-      },
-      {
-        text: '线上作品',
-        items: [
-          {
-            text: '轻取(文件收集)',
-            link: 'https://ep2.sugarat.top'
-          },
-          {
-            text: '个人图床',
-            link: 'https://imgbed.sugarat.top'
-          },
-          {
-            text: '考勤小程序',
-            link: 'https://hdkq.sugarat.top/'
-          },
-          {
-            text: '时光恋人',
-            link: 'https://lover.sugarat.top'
-          },
-          {
-            text: '在线简历生成',
-            link: 'https://resume.sugarat.top/'
-          }
-        ]
-      },
+      // {
+      //   text: `v${packageJSON.version}`,
+      //   link: '/changelog'
+      // },
+      // {
+      //   text: '个人作品展示',
+      //   link: '/work'
+      // },
+      // {
+      //   text: '案例',
+      //   link: '/example/'
+      // },
+      // {
+      //   text: '线上作品',
+      //   items: [
+      //     {
+      //       text: '轻取(文件收集)',
+      //       link: 'https://ep2.sugarat.top'
+      //     },
+      //     {
+      //       text: '个人图床',
+      //       link: 'https://imgbed.sugarat.top'
+      //     },
+      //     {
+      //       text: '考勤小程序',
+      //       link: 'https://hdkq.sugarat.top/'
+      //     },
+      //     {
+      //       text: '时光恋人',
+      //       link: 'https://lover.sugarat.top'
+      //     },
+      //     {
+      //       text: '在线简历生成',
+      //       link: 'https://resume.sugarat.top/'
+      //     }
+      //   ]
+      // },
     ],
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/ATQQ/sugar-blog/tree/master/packages/theme'
+        link: 'https://github.com/rainbow401'
       },
-      {
-        icon: 'x',
-        link: 'https://x.com/Mr_XiaoZou'
-      }
+      // {
+      //   icon: 'x',
+      //   link: 'https://x.com/Mr_XiaoZou'
+      // }
     ],
-    editLink: {
-      pattern:
-        'https://github.com/ATQQ/sugar-blog/tree/master/packages/theme/docs/:path',
-      text: '去 GitHub 上编辑内容'
-    },
+    // editLink: {
+    //   pattern:
+    //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/theme/docs/:path',
+    //   text: '去 GitHub 上编辑内容'
+    // },
     lastUpdatedText: '上次更新于',
     outline: {
       level: [2, 3],
